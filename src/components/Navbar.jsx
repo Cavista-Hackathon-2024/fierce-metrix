@@ -13,7 +13,7 @@ const Navbar = () => {
         <h3 className="font-Poppins text-xl font-bold text-gray-500 md:text-3xl">
           h<span className="text-green_light">REMIND</span>
         </h3>
-        <div className="hidden gap-6 font-Inter font-medium text-gray-600 md:flex">
+        <div className="hidden gap-6 font-Inter text-sm font-medium text-gray-600 lg:flex">
           <Link to="/" className={pathname === "/" ? "active" : ""}>
             Home
           </Link>
@@ -34,7 +34,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button className="bg-green_dark hidden rounded-md px-7 py-2 text-center font-bold text-white md:block">
+        <button className="bg-green_dark hidden rounded-md px-7 py-2 text-center font-bold text-white lg:block">
           Let's get Started
         </button>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
           <IoMdMenu
             size={30}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden"
+            className="lg:hidden"
           />
         )}
       </nav>

@@ -15,15 +15,15 @@ const Home = () => {
           </h1>
           <img src={docsSvg} />
         </div>
-        <div className="my-10 flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
-          <div className="w-full md:w-[45%]">
+        <div className="my-10 flex flex-col items-center justify-between gap-6 lg:flex-row lg:gap-0">
+          <div className="w-full lg:w-[45%]">
             <img
               src={docsImage}
               alt="image of a femal e doctor"
               className="rounded-[20px]"
             />
           </div>
-          <div className="flex w-full flex-col gap-6 text-center font-Inter md:w-1/2 md:items-end md:text-left">
+          <div className="flex w-full flex-col gap-6 text-center font-Inter lg:w-1/2 lg:items-end lg:text-left">
             <h3 className="flex flex-col text-xl">
               Are you worried about missing a dose or taking the wrong one? If
               so, you're not alone. Millions of people face challenges in
