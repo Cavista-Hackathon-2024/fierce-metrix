@@ -81,3 +81,7 @@
 .body {
   font-family: "Inter", sans-serif;
 }
+
+.active {
+  @apply text-green_light font-bold;
+}
