@@ -1,16 +1,16 @@
 import React from "react";
 import docsSvg from "../assets/doc.svg";
 import docsImage from "../assets/image.jpg";
-import PrimaryBtn from "@/components/PrimaryBtn";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
       <main>
-        <div className="border-green_light mt-3 flex flex-col items-center gap-5 border-y-[1px] py-5 md:mt-9 ">
+        <div className="mt-3 flex flex-col items-center gap-5 border-y-[1px] border-green_light py-5 md:mt-9 ">
           <h1 className="text-center font-Inter text-[32px] font-medium leading-snug md:text-left md:text-[65px]">
             Let us help you
-            <span className="text-green_light font-bold"> remember</span> and
+            <span className="font-bold text-green_light"> remember</span> and
             stay consistent on your meds
           </h1>
           <img src={docsSvg} />
@@ -28,20 +28,19 @@ const Home = () => {
               Are you worried about missing a dose or taking the wrong one? If
               so, you're not alone. Millions of people face challenges in
               managing their medications{" "}
-              <span className="text-green_light font-semibold">
+              <span className="font-semibold text-green_light">
                 efficiently.
               </span>
             </h3>
             <h3 className="text-lg">
               Disclaimer:{" "}
-              <span className="text-green_light font-semibold">hREMIND</span> is
+              <span className="font-semibold text-green_light">hREMIND</span> is
               intended for informational purposes only and should not be a
               substitute for professional medical advice. Always consult with
               your doctor or pharmacist before making any changes to your
               medication regimen.
             </h3>
-
-            <PrimaryBtn />
+            <Link className="primary_btn">Get Started</Link>
           </div>
         </div>
       </main>

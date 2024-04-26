@@ -7,6 +7,7 @@ import MobileNavMenu from "./MobileNavMenu";
 const Navbar = () => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <nav className="sticky top-0 flex h-fit items-center justify-between bg-white py-5">
@@ -34,9 +35,9 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button className="bg-green_dark hidden rounded-md px-7 py-2 text-center font-bold text-white lg:block">
+        <Link to="/create" className="primary_btn hidden md:block">
           Let's get Started
-        </button>
+        </Link>
 
         {isOpen ? (
           <MobileNavMenu

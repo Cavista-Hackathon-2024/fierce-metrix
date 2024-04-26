@@ -27,9 +27,9 @@ const MobileNavMenu = ({ pathname, setIsOpen }) => {
             Contact support
           </Link>
 
-          <button className="bg-green_dark rounded-md px-4 py-2 text-center font-bold text-white">
+          <Link to="/create" className="primary_btn">
             Let's Get Started
-          </button>
+          </Link>
         </div>
       </div>
     </>
