@@ -5,10 +5,8 @@ import { Outlet } from "react-router-dom";
 const AppLayout = () => {
   return (
     <>
-      <div className="container mx-auto">
-        <Navbar />
-        <Outlet />
-      </div>
+      <Navbar />
+      <Outlet />
     </>
   );
 };

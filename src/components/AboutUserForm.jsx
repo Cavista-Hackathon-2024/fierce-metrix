@@ -1,18 +1,16 @@
 import { AppContext } from "@/context/AppContext";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import AgeCalculator from "./AgeCalculator";
+import GenderSelect from "./GenderSelect";
 
 const AboutUserForm = () => {
   const { setCurrentStep, stepData } = useContext(AppContext);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setCurrentStep(stepData[1]);
-  };
+
   return (
     <>
-      <form className="flex w-full flex-col gap-10" onSubmit={handleSubmit}>
+      <form className="flex w-full flex-col gap-10">
         <div className="flex gap-4">
           <div className="flex-1">
             <Label htmlFor="firstname">Firstname</Label>
@@ -25,9 +23,15 @@ const AboutUserForm = () => {
         </div>
         <div className="flex gap-4">
           <AgeCalculator />
+
           <div className="flex-1">
             <Label htmlFor="mobile">Mobile Number</Label>
             <Input id="mobile" type="number" />
+          </div>
+
+          <div>
+            <Label htmlFor="gender">Gender</Label>
+            <GenderSelect id="gender" />
           </div>
         </div>
         <button
