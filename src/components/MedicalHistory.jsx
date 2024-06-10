@@ -1,37 +1,37 @@
 import { AppContext } from "@/context/AppContext";
 import React, { useContext } from "react";
-import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import SelectOption from "./SelectOption";
-import GenderSelect from "./GenderSelect";
+import { Textarea } from "./ui/textarea";
 
 const MedicalHistory = () => {
   const { setCurrentStep, stepData } = useContext(AppContext);
 
   return (
     <>
-      <form className="flex w-full flex-col gap-10">
-        <div className="flex gap-4">
-          <div className="flex-1">
-            <Label htmlFor="has-ailment">Any current Disorder or Ailment</Label>
-            <SelectOption id="has-ailment" />
-          </div>
-          <div className="flex-1">
-            <Label htmlFor="ailment-type">If yes , State it</Label>
-            <Input id="ailment-type" />
-          </div>
+      <form className=" w-full space-y-4">
+        <div>
+          <Label htmlFor="has-ailment">Any current Disorder or Ailment?</Label>
+          <SelectOption id="has-ailment" />
         </div>
-        <div className="flex gap-4">
-          <div className="flex-1">
-            <Label htmlFor="hospitalised">
-              Have you been previously/currently hospitalised
-            </Label>
-            <Input id="hospitalized" />
-          </div>
 
-          <div className="flex-1">
-            <Label htmlFor="gender">Gender</Label>
-            <GenderSelect id="gender" />
+        <div>
+          <Label htmlFor="ailment-nature">If yes , State it</Label>
+          <Textarea id="ailment-nature" />
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-full">
+            <Label htmlFor="is-hospitalized">
+              Are you currently hospitalised?
+            </Label>
+            <SelectOption id="is-hospitalized" />
+          </div>
+          <div className="w-full">
+            <Label htmlFor="been-hospitalized">
+              Have you been previously hospitalised?
+            </Label>
+            <SelectOption id="been-hospitalized" />
           </div>
         </div>
 

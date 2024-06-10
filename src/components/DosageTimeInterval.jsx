@@ -6,10 +6,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const DosageTimeInterval = () => {
+const DosageTimeInterval = ({ id }) => {
   return (
     <Select>
-      <SelectTrigger className="w-full">
+      <SelectTrigger className="w-full" id={id}>
         <SelectValue placeholder="Select" />
       </SelectTrigger>
       <SelectContent>

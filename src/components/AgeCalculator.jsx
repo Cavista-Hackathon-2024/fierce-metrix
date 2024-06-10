@@ -25,9 +25,8 @@ function AgeCalculator() {
   };
 
   return (
-    <div className="flex-1">
+    <div>
       <Label htmlFor="date-picker">Select your date of birth</Label>
-
       <Input
         id="date-picker"
         type="date"

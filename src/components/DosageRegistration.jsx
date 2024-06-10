@@ -14,24 +14,19 @@ const DosageRegistration = () => {
     e.preventDefault();
   };
 
-  const handleGoBack = (e) => {
-    e.preventDefault();
-    setCurrentStep(stepData[1]);
-  };
-
   return (
     <>
       <form className="flex w-full flex-col gap-10">
         <div className="flex gap-4">
           <div className="flex-1">
-            <Label htmlFor="nameofmed">
+            <Label htmlFor="name-of-med">
               What medication are you currently on ?
             </Label>
-            <Input id="nameofmed" />
+            <Input id="name-of-med" />
           </div>
           <div className="flex-1">
-            <Label htmlFor="lastname">Date started</Label>
-            <Input id="lastname" />
+            <Label htmlFor="date-started">Date started</Label>
+            <Input id="date-started" />
           </div>
         </div>
         <div className="flex gap-4">
@@ -66,6 +61,7 @@ const DosageRegistration = () => {
           <ConfirmationModal
             confirmed={confirmed}
             setConfirmed={setConfirmed}
+            handleSubmit={handleSubmit}
           />
         )}
       </form>
